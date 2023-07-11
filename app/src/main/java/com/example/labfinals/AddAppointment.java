@@ -27,7 +27,7 @@ public class AddAppointment extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
-
+        //initialization//
         appointment_id = (TextView) findViewById(R.id.app_id_value);
         patientId_spinner = (Spinner) findViewById(R.id.patient_id_spinner);
         date = (TextView) findViewById(R.id.editTextDate);
