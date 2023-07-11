@@ -1,0 +1,142 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="3dp"
+    tools:context=".AddAppointment"
+    android:background="@drawable/login"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/add_appointment_title"
+        style="@style/titleStyle"
+        android:layout_marginTop="200dp"
+        android:text="@string/add_appointment_title" />
+
+    <TextView
+        android:id="@+id/app_id"
+        style="@style/labelStyle"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/add_appointment_title"
+        android:text="Appointment ID"/>
+
+    <TextView
+        android:id="@+id/app_id_value"
+        style="@style/editTextStyle"
+        android:layout_alignTop="@id/app_id"
+        android:layout_toRightOf="@id/app_id" />
+
+    <TextView
+        android:id="@+id/doctor_id_label"
+        style="@style/labelStyle"
+        android:layout_below="@+id/app_id"
+        android:layout_marginTop="10dp"
+        android:text="Patient ID :" />
+
+    <Spinner
+        android:id="@+id/patient_id_spinner"
+        style="@style/editTextStyle"
+        android:layout_alignTop="@id/doctor_id_label"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/doctor_id_label" />
+
+    <TextView
+        android:id="@+id/patient_name_label"
+        android:layout_below="@+id/doctor_id_label"
+        style="@style/labelStyle"
+        android:layout_marginTop="10dp"
+        android:text="Patient Name :" />
+
+    <Spinner
+        android:id="@+id/PatientNameTextView"
+        style="@style/editTextStyle"
+        android:layout_alignTop="@id/patient_name_label"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/patient_name_label"/>
+
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_below="@+id/patient_name_label"
+        style="@style/labelStyle"
+        android:text="Date :"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/editTextDate"
+        android:layout_below="@id/patient_id_spinner"
+        android:layout_alignTop="@id/date_label"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/date_label"
+        style="@style/editTextStyle"
+        android:hint="Pick a date"
+        android:onClick="showDatePicker" />
+
+    <TextView
+        android:id="@+id/time_label"
+        android:layout_below="@+id/date_label"
+        style="@style/labelStyle"
+        android:text="Time :"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/time_spinner"
+        android:layout_below="@id/editTextDate"
+        android:layout_alignTop="@id/time_label"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/time_label"
+        style="@style/editTextStyle"
+        android:hint="Pick a time" />
+
+    <TextView
+        android:id="@+id/doctor_label"
+        android:layout_below="@+id/time_label"
+        style="@style/labelStyle"
+        android:text="Doctor :"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/doctor_spinner"
+        android:layout_alignTop="@id/doctor_label"
+        android:layout_toRightOf="@id/doctor_label"
+        style="@style/editTextStyle"
+        android:hint="Choose a doctor"
+        android:layout_marginLeft="4dp" />
+
+    <TextView
+        android:id="@+id/clinic_label"
+        android:layout_below="@+id/doctor_label"
+        style="@style/labelStyle"
+        android:text="Clinic :"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/editTextClinic"
+        style="@style/editTextStyle"
+        android:layout_alignTop="@id/clinic_label"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/clinic_label" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/clinic_label">
+
+    <Button
+        android:id="@+id/add_appointment_button"
+        android:layout_below="@id/clinic_label"
+        style="@style/buttonStyle"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:text="ADD" />
+
+    <Button
+        android:id="@+id/back_from_appointment_button"
+        android:layout_below="@id/clinic_label"
+        android:layout_toRightOf="@+id/add_appointment_button"
+        style="@style/buttonStyle"
+        android:layout_marginTop="40dp"
+        android:text="Back Home" />
+
+    </LinearLayout>
+
+</RelativeLayout>
